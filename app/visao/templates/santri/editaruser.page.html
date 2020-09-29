@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>santri</title>
+    <link rel="stylesheet" href="@field{{recursos}}static/css/w3.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/santri.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/toastr.css">
+
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/brands.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/fontawesome.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/regular.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/solid.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/svg-with-js.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/v4-shims.css">
+
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+      tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+
+  </head>
+  <body>
+@section("templates.santri.toploguedmenu")
+    <div class=" container">
+
+      <h4>Editar usuário</h4>
+      <hr>
+      <form action="/editar/confirmaedit/" method="POST">
+     <div>
+        <label>Nome</label>
+        <input type="text" name="uname" style="width : 100%; height: 35px" value="@field{{usernome}}">
+      </div>
+
+      <div>
+        <label>Login</label>
+        <input type="text" name="ulogin" style="width : 100%; height: 35px" value="@field{{userlogin}}">
+      </div>
+
+      <div>
+        <label>Password</label>
+        <input type="password" name="upass" style="width : 100%; height: 35px" value="@field{{usersenha}}">
+      </div>
+
+      <div>
+        <label>Ativo - <i>Atualmente:</i><b>@field{{userativo}}</b></label>
+        <select name="uactive" style="width : 100%; height: 35px">
+          @field{{ativooption}}
+        </select>
+      </div>
+
+      <ul>
+        <li id="cad_client"><input type="checkbox" name="cad_client" value="s"><label>Cadastrar Cliente</label></li>
+        <li id="del_client"><input type="checkbox" name="del_client" value="s"><label>excluir Cliente</label></li>
+        <li id="cad_forn"><input type="checkbox" name="cad_forn" value="s"><label>Cadastrar Fornecedor</label></li>
+        <li id="del_forn"><input type="checkbox" name="del_forn" value="s"><label>excluir Fornecedor</label></li>
+        <li id="cad_prod"><input type="checkbox" name="cad_prod" value="s"><label>Cadastrar Produto</label></li>
+        <li id="del_prod"><input type="checkbox" name="del_prod" value="s"><label>excluir Produto</label></li>
+      </ul>
+  <hr>
+      <input type="submit"  class="w3-button w3-theme w3-margin-top w3-margin-bottom" id="btn-up" value="Gravar">
+      <button class="w3-button w3-margin-top w3-margin-bottom w3-right btn btn-warning" >Cancelar</button>
+      <input type="hidden" value="@field{{userid}}" name="userid">
+    </form>
+    </div>
+  </body>
+  <script type="text/javascript">
+  </script>
+</html>

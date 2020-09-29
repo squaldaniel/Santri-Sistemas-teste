@@ -1,0 +1,16 @@
+# Arquivo: .htaccess
+# Data: 17/12/2013
+# Última alteração: 21/04/2019
+# reescrita de URL ativa
+RewriteEngine on
+# Condição, se o arquivo existir, execute arquivo
+RewriteCond %{REQUEST_FILENAME} !-f
+# Condição, se o diretório existir, execute diretório
+RewriteCond %{SCRIPT_FILENAME} !-d
+# joga tudo que é digitado na variavel "url"
+RewriteRule ^(.*)$ index.php?url=$1
+# desabilitando a listagem de diretorios do sistema
+# Options -Indexes
+<FilesMatch "\.(htm|html|css|js|php)$">
+	AddDefaultCharset UTF-8
+</FilesMatch>

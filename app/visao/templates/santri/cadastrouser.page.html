@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  <title>santri</title>
+
+    <link rel="stylesheet" href="@field{{recursos}}static/css/w3.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/santri.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/toastr.css">
+
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/brands.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/fontawesome.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/regular.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/solid.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/svg-with-js.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/v4-shims.css">
+
+</head>
+
+<body>
+  @section("templates.santri.toploguedmenu")
+  <script src="static/js/jquery.js"></script>
+  <div class="container">
+    <div id="lista_usuarios" class="w3-margin">
+
+      <h4>Cadastro de usuários</h4>
+      <hr>
+      <div style="display: none;">
+        <label>Usuário 1</label>
+      </div>
+      <form action="/cadastrar/newuser/" method="POST">
+      <div>
+        <label>Nome</label>
+        <input type="text" name="unome" class="w3-input w3-block w3-border" style="width : 100%; height: 35px" required>
+      </div>
+
+      <div>
+        <label>Login</label>
+        <input type="text" name="ulogin" class="w3-input w3-block w3-border" style="width : 100%; height: 35px" required>
+      </div>
+
+      <div>
+        <label>Senha</label>
+        <input type="text" name="ukeypass" class="w3-input w3-block w3-border" style="width : 100%; height: 35px" required>
+      </div>
+
+      <div>
+        <label>Ativo</label>
+        <input type="text"  class="w3-input w3-block w3-border" style="width : 100%; height: 35px" value="S" disabled>
+        <input type="hidden" name="uactive" value="S">
+      </div>
+
+      <ul>
+        <li id="cad_client"><input name="cad_client" type="checkbox" value="s"><label>Cadastrar Cliente</label></li>
+        <li id="del_client"><input name="del_client" type="checkbox" value="s"><label>excluir Cliente</label></li>
+        <li id="cad_forn"><input name="cad_forn" type="checkbox" value="s"><label>Cadastrar Fornecedor</label></li>
+        <li id="del_forn"><input name="del_forn" type="checkbox" value="s"><label>excluir Fornecedor</label></li>
+        <li id="cad_prod"><input name="cad_prod" type="checkbox" value="s"><label>Cadastrar Produto</label></li>
+        <li id="del_prod"><input name="del_prod" type="checkbox" value="s"><label>excluir Produto</label></li>
+      </ul>
+
+      <hr>
+
+      <button class="w3-button w3-theme w3-margin-top w3-margin-bottom" >Gravar</button>
+      <a href="/" class="w3-button w3-margin-top w3-margin-bottom w3-right btn btn-warning" >Cancelar</a>
+      </form>
+
+    </div>
+  </div>
+</body>
+</html>

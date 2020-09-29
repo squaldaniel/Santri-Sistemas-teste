@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>santri</title>
+    <link rel="stylesheet" href="@field{{recursos}}static/css/w3.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/santri.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/toastr.css">
+
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/brands.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/fontawesome.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/regular.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/solid.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/svg-with-js.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/v4-shims.css">
+
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      tr:nth-child(even) {background-color: #f2f2f2;}
+    </style>
+
+  </head>
+  <body>
+@section("templates.santri.toploguedmenu")
+    <div>
+      <div id="lista_usuarios" class="w3-margin">
+            <input class="form-control form-control-lg w3-input w3-border w3-margin-top" type="text" placeholder="Nome" id="nome" style="width : 100%; height: 35px">
+            <button class="w3-button w3-theme w3-margin-top" id="btn-ajax">Buscar</button>
+        <a href="/cadastrar/usuarios" class="w3-button w3-theme w3-margin-top w3-right">Cadastrar novo usuário</a>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</td>
+              <th>Login</td>
+              <th>Ativo</td>
+              <th>Opções</td>  
+            </tr>
+          </thead>
+          <tbody id="tablesearch">
+            @field{{usuariostable}}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </body>
+  <script src="@field{{recursos}}static/js/jquery.js"></script>
+  <script type="text/javascript">
+    $("#btn-ajax").click(function(){
+      var text =  $("#nome").val();
+      $("#tablesearch").load("/ajax/buscauser/", {uname:text});
+    });
+  </script>
+</html>

@@ -1,0 +1,20 @@
+{
+    "name": "kingkernel/marrento",
+    "description": "Framework criado por Daniel J. Santos",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniels",
+            "email": "daniel.santos.ap@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "repositories": [
+    {
+       "type": "vcs",
+       "url": "https://github.com/kingkernel/marrento.git" 
+    }
+  ]
+}

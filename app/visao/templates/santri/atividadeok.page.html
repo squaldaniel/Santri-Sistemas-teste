@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <title>santri</title>
+    <link rel="stylesheet" href="@field{{recursos}}static/css/w3.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/santri.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css/toastr.css">
+
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/brands.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/fontawesome.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/regular.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/solid.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/svg-with-js.css">
+    <link rel="stylesheet" href="@field{{recursos}}static/css-awesome/v4-shims.css">
+  </head>
+  <body>
+@section("templates.santri.toploguedmenu")
+  <div class="container">
+    <div class="jumbotron mt-3" id="msgbox">
+      <h1>@field{{grandemensagem}}</h1>
+      <p class="lead">@field{{pequenamensagem}}</p>
+      <a class="btn btn-lg btn-primary" href="@field{{linkaviso}}" role="button">@field{{botaotexto}}</a>
+    </div>
+  </div>
+  </div>
+  </body>
+  <script src="@field{{recursos}}static/js/jquery.js"></script>
+  <script type="text/javascript">
+    @field{{script}}
+  </script>
+</html>
