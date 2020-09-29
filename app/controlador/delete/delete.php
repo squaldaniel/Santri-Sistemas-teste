@@ -19,6 +19,7 @@
  			$this->change["pequenamensagem"] = "aguarde que você será redirecionado em 5 segundos ou pressione o botão";
  			$this->change["botaotexto"] ="Clique para o Início";
 			$this->change["script"]= 'window.setInterval(function(){window.location.href="/";window.location.reload(forceReload);}, 5000);';
+			$this->change["linkaviso"]="/";
 			$this->loadview("templates.santri.atividadeok", $this->change);
 		}
 	}

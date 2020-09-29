@@ -2,7 +2,7 @@
 class index  extends page {
 	public function __construct()
 	{
-		$this->change = ["recursos" => "app/visao/templates/santri/", "nomeuser"=>$_SESSION["usuario"]];
+		$this->change = ["recursos" => "app/visao/templates/santri/"];
 	}
 	public function index()
 	{
